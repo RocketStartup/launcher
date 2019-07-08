@@ -26,7 +26,7 @@ class Orm{
             $this->return = system($this->commands[$this->parms[1]]);
         }else{
             array_shift($this->parms);
-            $this->return = system('vendor/bin/doctrine '.implode(' ',$this->parms));
+            $this->return = system('php ./vendor/bin/doctrine '.implode(' ',$this->parms));
         }
     }
 

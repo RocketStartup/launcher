@@ -53,6 +53,15 @@ class AppConfig{
                 return $this->listAllApps();
             }
         }
+
+        if(!file_exists(PATH_ROOT.$this->jsonApp)){
+            $dir = explode('/',$this->jsonApp);
+            unset($dir[count($dir)-1]);
+            $dir = implode('/',$dir);
+            if(!file_exists(PATH_ROOT.$dir)){
+                mkdir(PATH_ROOT.$dir,0777,true);
+            }
+        }
         $fp = fopen(PATH_ROOT.$this->jsonApp, 'w');
         fwrite($fp, json_encode($appjson['Applications']));
         fclose($fp);
