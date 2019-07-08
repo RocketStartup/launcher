@@ -20,7 +20,7 @@ class FrontView{
             if($this->parms[1]=='front:build-template'){
                 if(file_exists(PATH_ROOT.'templates/'.$this->parms[2])){
                     $this->return = system(
-                        str_replace('@templatename','template_'.$this->parms[2],$this->commands[$this->parms[1]])
+                        str_replace('@templatename',$this->parms[2],$this->commands[$this->parms[1]])
                     );
                 }else{
                     $this->return = "\e[31mTemplate '".$this->parms[2]."' not fount\e[0m\n";
