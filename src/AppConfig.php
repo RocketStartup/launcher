@@ -3,7 +3,7 @@
 namespace Astronphp\Handler;
 
 class AppConfig{
-    private $jsonApp    =   'storage/database/app.json';
+    private $jsonApp    =   'tmp/database/app.json';
     public $argv        =   array();
     public $app         =   array();
     public $return      =   '';

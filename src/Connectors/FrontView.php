@@ -18,7 +18,7 @@ class FrontView{
     private function executeShell(){
         if(in_array($this->parms[1],array_flip($this->commands))==true){
             if($this->parms[1]=='front:build-template'){
-                if(file_exists(PATH_ROOT.'sources/template_'.$this->parms[2])){
+                if(file_exists(PATH_ROOT.'templates/'.$this->parms[2])){
                     $this->return = system(
                         str_replace('@templatename','template_'.$this->parms[2],$this->commands[$this->parms[1]])
                     );
