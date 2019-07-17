@@ -49,6 +49,7 @@ class AppConfig{
         foreach ($this->app as $key => $value) {
             if(isset($appjson['Applications'][$value])){
                 $appjson['Applications'] = $appjson['Applications'][$value];
+                $appjson['Applications']['app'] = $this->app[0];
             }else{
                 return $this->listAllApps();
             }
