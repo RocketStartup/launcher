@@ -6,7 +6,8 @@ class Orm{
     public  $return;
     private $parms      = array();
     private $commands   = array(
-                                "orm:create-entity"         =>      'php '.PATH_ROOT.'vendor/astronphp/orm/src/schema/generate.php'
+                                "orm:create-entity"         =>      'php '.PATH_ROOT.'vendor/astronphp/orm/src/schema/generate.php',
+                                "orm:update-db"             =>      PATH_ROOT.'vendor/bin/doctrine orm:schema-tool:update --force'
                           );
     
     public function __construct($p=array()){
